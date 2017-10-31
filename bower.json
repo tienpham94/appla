@@ -1,0 +1,30 @@
+{
+  "name": "appla-client",
+  "authors": [
+    "Bao Nguyen <baonguyen1201@gmail.com>"
+  ],
+  "description": "Client-side code for Appla",
+  "main": "",
+  "moduleType": [],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "lib",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-ui-router": "^0.2.18",
+    "angular": "^1.5.9",
+    "angular-sanitize": "^1.5.3",
+    "materialize": "^0.97.8",
+    "angular-moment": "^1.0.1",
+    "angular-socket-io": "^0.7.0",
+    "angular-scroll-glue": "^2.1.0"
+  },
+  "resolutions": {
+    "angular-moment": "^1.0.1"
+  }
+}
