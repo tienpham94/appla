@@ -3,16 +3,7 @@
   "version": "0.0.1",
   "description": "socket app",
   "dependencies": {
-    "bcrypt": "^0.8.7",
-    "body-parser": "^1.15.2",
-    "ejs": "^2.5.3",
     "express": "^4.10.2",
-    "express-validator": "^2.21.0",
-    "jsonwebtoken": "^7.1.9",
-    "lackey-mongoose-slugify": "^0.1.1",
-    "moment": "^2.16.0",
-    "mongodb": "^2.2.11",
-    "mongoose": "^4.6.6",
     "socket.io": "^1.5.1"
   }
 }
