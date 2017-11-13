@@ -1,4 +1,17 @@
 angular.module('room.module')
+    .component('wordCloud', {
+        // template: "<div class=''><h1 class='new-class'>{{ title }}</h1><button ng-click='someClickTest()'>Click me!</button></div>",
+        templateUrl: '/modules/room/views/wordcloud.html',
+        controller: function($scope){
+            $scope.title = 'Hi there'
+            $scope.clicks = 0
+            $scope.someClickTest = function(){
+                console.log("clicked")
+                $scope.clicks += 1
+                $scope.title = 'Clicked ' + $scope.clicks + ' times'
+            }
+        }
+    })
     .directive('userList', ['roomSocket','RoomService', function (roomSocket, RoomService) {
         return {
             restrict: 'E',
