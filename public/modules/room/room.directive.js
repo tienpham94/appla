@@ -3,8 +3,8 @@ angular.module('room.module')
         // template: "<div class=''><h1 class='new-class'>{{ title }}</h1><button ng-click='someClickTest()'>Click me!</button></div>",
         templateUrl: '/modules/room/views/wordcloud.html',
         controller: function($scope){
-            $scope.title = 'Hi there'
-            $scope.clicks = 0
+            $scope.title = 'Wordcloud'
+            // $scope.clicks = 0
             $scope.someClickTest = function(){
                 console.log("clicked")
                 $scope.clicks += 1
