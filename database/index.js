@@ -4,7 +4,7 @@ var constants   = require('../config/constants');
 var Mongoose 	= require('mongoose');
 
 // Connect to the database
-Mongoose.connect(constants.database);
+mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/deploy_me')
 
 // Throw an error if the connection fails
 Mongoose.connection.on('error', function(err) {
