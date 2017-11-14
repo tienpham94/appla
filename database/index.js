@@ -4,7 +4,7 @@ var constants   = require('../config/constants');
 var Mongoose 	= require('mongoose');
 
 // Connect to the database
-mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/deploy_me')
+mongoose.connect(process.env.MONGODB_URI || 'mongodb://heroku_wnj6mwlh:nfkljht5lu3aqt5erk3si3qh9h@ds257495.mlab.com:57495/heroku_wnj6mwlh')
 
 // Throw an error if the connection fails
 Mongoose.connection.on('error', function(err) {
