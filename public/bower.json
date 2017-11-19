@@ -26,5 +26,8 @@
   },
   "resolutions": {
     "angular-moment": "^1.0.1"
+  },
+  "scripts": {
+    "postinstall": "bower install"
   }
 }
