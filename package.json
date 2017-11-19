@@ -16,6 +16,6 @@
     "socket.io": "^1.5.1"
   },
   "scripts": {
-      "postinstall": "./public/bower install"
+    "postinstall": "bower install"
   }
 }
