@@ -14,5 +14,8 @@
     "mongodb": "^2.2.11",
     "mongoose": "^4.6.6",
     "socket.io": "^1.5.1"
+  },
+  "scripts": {
+      "postinstall": "./node_modules/bower/bin/bower install"
   }
 }
