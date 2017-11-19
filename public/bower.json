@@ -10,7 +10,6 @@
   "ignore": [
     "**/.*",
     "node_modules",
-    "bower_components",
     "lib",
     "test",
     "tests"
@@ -26,8 +25,5 @@
   },
   "resolutions": {
     "angular-moment": "^1.0.1"
-  },
-  "scripts": {
-    "postinstall": "bower install"
   }
 }
