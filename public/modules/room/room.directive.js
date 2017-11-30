@@ -38,6 +38,60 @@ angular.module('room.module')
             link: function(scope) {
                 scope.sendMessage = sendMessage;
                 scope.message = "";
+                scope.messages = [
+                  {
+                  "owner_info": {
+                    "first_name": "Tien",
+                    "last_name": "Pham"
+                    }
+                  },
+                  {
+                    "created_at": "12:30"
+                  },
+                  {
+                    "message": "Hi there this is Tien"
+                  },
+                  {
+                  "owner_info": {
+                    "first_name": "Tien",
+                    "last_name": "Pham"
+                    }
+                  },
+                  {
+                    "created_at": "12:30"
+                  },
+                  {
+                    "message": "Hi there this is Tien"
+                  },{
+                  "owner_info": {
+                    "first_name": "Tien",
+                    "last_name": "Pham"
+                    }
+                  },
+                  {
+                    "created_at": "12:30"
+                  },
+                  {
+                    "message": "Hi there this is Tien"
+                  }
+                ];
+
+        //         {{message.owner_info.first_name}} {{message.owner_info.last_name}}
+        //     </div>
+        //     <div class="col m12 time-stamp">
+        //         {{ message.created_at  | amFromUnix | amDateFormat:'HH:mm DD MMM'}}
+        //     </div>
+        // </div>
+        // <div class="hide-on-med-and-up">
+        //     <div class="col s6 left-align username text-accent-1">
+        //         {{message.owner_info.first_name}} {{message.owner_info.last_name}}
+        //     </div>
+        //     <div class="col s6 right-align time-stamp text-accent-1">
+        //         {{ message.created_at  | amFromUnix | amDateFormat:'HH:mm DD MMM'}}
+        //     </div>
+        // </div>
+        // <div class="col s12 m8">
+        //     <div class="msg-content msg grey lighten-4">{{message.message}}</div>
 
                 roomSocket.forward('messages/received', scope);
 
