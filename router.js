@@ -6,7 +6,6 @@ var messageCtrl = require('./controllers/messageCtrl');
 var authCtrl = require('./controllers/authCtrl');
 var roomCtrl = require('./controllers/roomCtrl');
 
-
 // set headers to allow cross domain request
 router.use(authCtrl.headerAllow);
 router.options('/*', authCtrl.setHeader);
