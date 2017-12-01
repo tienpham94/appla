@@ -18,7 +18,6 @@ var url = 'mongodb://localhost:27017/appla';
 
 var insertDocument = function(db, callback) {
    db.collection('messages').insertOne( {
-    "_id" : ObjectId("5a10703a6800d66b6fa264e7"),
     "room_slug" : "aab",
     "message" : "Hi this is Tien Pham",
     "owner_info" : {
@@ -31,7 +30,6 @@ var insertDocument = function(db, callback) {
 
 
   db.collection('messages').insertOne( {
-   "_id" : ObjectId("5a10703a6800d66b6fa264e9"),
    "room_slug" : "aab",
    "message" : "tyyni höpöhöpö Demon Katotaan jos se toimii oikein nyt tässä sitten tää on Googlen puhe puhe rajapinnan päälle rakennettu juttu et jos sulla on oma android-puhelin imuroida keskipiste sillä tavalla se tallentaa sun puhetta että tää laittaa mun puhetta liittyisin keskustelu analyysi homma ei toimi verrattain hyvin niinku näin koska suurinpiirtein",
    "owner_info" : {
@@ -43,7 +41,6 @@ var insertDocument = function(db, callback) {
   });
 
   db.collection('messages').insertOne( {
-   "_id" : ObjectId("5a10703a6800d66b6fa264e8"),
    "room_slug" : "aab",
    "message" : "No niin kokeillaas Mä en tiedä toimiiko ja 10 Mä juttelin puheentunnistuksen Mitä ennen vanhaan ei ole ollenkaan mahdollista niin tää toimii äänellä kuin Äidillä oli sitten Tosiaan kun Johanna ja Väri vaihtelee puhelinta tässä ja se ihan sujuvasti jatkaa Eli se mallit ovat nykyään aika hienovaraisia ennen vanhan mallin tuli enemmän sellaisia treenattiin tietyille äänille ja sitten piti etukäteen kertoo että tämä puhua on tämän tyyppinen ihminen Mitähän se siellä puhuu väri vaihtelee puhelinta sujuvasti",
    "owner_info" : {
