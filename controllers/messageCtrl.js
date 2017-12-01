@@ -1,4 +1,5 @@
 var Message = require('../models/Message.js');
+
 var messages = {
 
     /**
@@ -33,7 +34,9 @@ var messages = {
         });
     },
 
-
+   /*
+  Use this for word cloud
+    */
     getMessagesByRoom: function(req, res){
         Message.findByRoomSlug(req.params.roomSlug, function(err, result){
             if (err)

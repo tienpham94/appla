@@ -38,60 +38,6 @@ angular.module('room.module')
             link: function(scope) {
                 scope.sendMessage = sendMessage;
                 scope.message = "";
-                scope.messages = [
-                  {
-                  "owner_info": {
-                    "first_name": "Tien",
-                    "last_name": "Pham"
-                    }
-                  },
-                  {
-                    "created_at": "12:30"
-                  },
-                  {
-                    "message": "Hi there this is Tien"
-                  },
-                  {
-                  "owner_info": {
-                    "first_name": "Tien",
-                    "last_name": "Pham"
-                    }
-                  },
-                  {
-                    "created_at": "12:30"
-                  },
-                  {
-                    "message": "Hi there this is Tien"
-                  },{
-                  "owner_info": {
-                    "first_name": "Tien",
-                    "last_name": "Pham"
-                    }
-                  },
-                  {
-                    "created_at": "12:30"
-                  },
-                  {
-                    "message": "Hi there this is Tien"
-                  }
-                ];
-
-        //         {{message.owner_info.first_name}} {{message.owner_info.last_name}}
-        //     </div>
-        //     <div class="col m12 time-stamp">
-        //         {{ message.created_at  | amFromUnix | amDateFormat:'HH:mm DD MMM'}}
-        //     </div>
-        // </div>
-        // <div class="hide-on-med-and-up">
-        //     <div class="col s6 left-align username text-accent-1">
-        //         {{message.owner_info.first_name}} {{message.owner_info.last_name}}
-        //     </div>
-        //     <div class="col s6 right-align time-stamp text-accent-1">
-        //         {{ message.created_at  | amFromUnix | amDateFormat:'HH:mm DD MMM'}}
-        //     </div>
-        // </div>
-        // <div class="col s12 m8">
-        //     <div class="msg-content msg grey lighten-4">{{message.message}}</div>
 
                 roomSocket.forward('messages/received', scope);
 
@@ -142,7 +88,21 @@ function compare(a,b) {
 
 
 function returnWords(){
-  var data= document.getElementById('txt').value;
+
+  var data_arr = [];
+
+  //TEST
+  var priceEls = document.getElementsByClassName("msg-content");
+  for (let i = 0; i < priceEls.length; i++) {
+    let price = priceEls[i].innerText;
+    data_arr.push(price);
+  }
+
+  var data = data_arr.join("");
+
+  //END TEST
+
+  // var data= document.getElementById('txt').value;
   var arr = [];
   var freq = wordFreq(data.toLowerCase());
   Object.keys(freq).sort().forEach(function(word) {
@@ -151,9 +111,21 @@ function returnWords(){
       obj["size"] = freq[word];
       arr.push(obj);
   });
-  return arr.filter((el) => {
+  var final_arr= arr.filter((el) => {
       return stopWords.indexOf(el.text) === -1;
     }).sort(compare);
+
+  //Find the most frequent 10 words
+  let most_freq_words_arr = [];
+  for(let i=0; i< 10;i++){
+    most_freq_words_arr.push(final_arr[i].text);
+  }
+  if(final_arr.length > 0){
+    document.getElementById("result").innerHTML = `The 10 most frequent words are: ${most_freq_words_arr.join(", ")}`
+  }
+
+  console.log(final_arr);
+  return final_arr;
 };
 
 function drawWordCloud(){
