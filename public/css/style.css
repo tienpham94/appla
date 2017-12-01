@@ -63,23 +63,34 @@ room-item {
     padding: 10px 0px;
 }
 
+.message-container-room {
+    display: block;
+    width: 500px;
+    float:left;
+    margin-left: 150px;
+    margin-top: 10px;
+    height: 500px;
+    background: #FAFAFA;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+}
+
 .message-container {
     top: 73px; bottom: 70px;
-    left: 20%;
-    /*right: 30%;*/
+    left: 30%; right: 30%;
     min-height: 400px;
     background: #FAFAFA;
     position: absolute;
     box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
 }
 
-.wordcloud {
-    top: 73px; bottom: 70px;
-    left: 50%;
-    /*right: 30%;*/
+.wordcloud{
+    display: block;
+    width: 500px;
+    float: left;
+    margin-top: 10px;
+    margin-left: 75px;
     min-height: 400px;
     background: #FAFAFA;
-    position: absolute;
     box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
 }
 
