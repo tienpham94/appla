@@ -16,7 +16,7 @@ var url = process.env.MONGODB_URI ||"mongodb://localhost/appla";
 
 // Mongoose.connect(process.env.MONGODB_URI ||"mongodb://localhost/appla");
 
-// var insertDocument = function(db, callback) {
+var insertDocument = function(db, callback) {
 //    db.collection('messages').insertOne( {
 //     "room_slug" : "aab",
 //     "message" : "Hi this is Tien Pham",
@@ -50,13 +50,14 @@ var url = process.env.MONGODB_URI ||"mongodb://localhost/appla";
 //    },
 //    "created_at" : 121241
 //   });
-// };
-// 
-// MongoClient.connect(url, function(err, db) {
-//   insertDocument(db, function() {
-//       db.close();
-//   });
-// });
+  db.collection('messages').drop();
+};
+
+MongoClient.connect(url, function(err, db) {
+  insertDocument(db, function() {
+      db.close();
+  });
+});
 
 //End Adding Seed data
 
