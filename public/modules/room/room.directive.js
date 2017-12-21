@@ -138,9 +138,12 @@ function drawWordCloud(){
     .fontWeight("bold")
     .fill(d3.scale.ordinal().range(["#884400", "#448800", "#888800", "#444400"]))
     .words(words)
+    .spiral("archimedean")
     .onwordclick(function(d, i) {
       var div = document.getElementById('result');
-      div.innerHTML += d.text + ", ";
+      var clicked_word = `<li style="list-style:disc">${d.text}</li>`;
+      document.getElementById('dictionary').innerHTML += clicked_word
+
     })
     .start();
   }

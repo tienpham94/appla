@@ -64,10 +64,11 @@ room-item {
 }
 
 .message-container-room {
-    display: block;
-    width: 500px;
-    float:left;
-    margin-left: 150px;
+    box-sizing: border-box;
+    display: inline-block;
+    float: left;
+    width: 30%;
+    margin: 0 1.5%;
     margin-top: 10px;
     height: 500px;
     background: #FAFAFA;
@@ -84,11 +85,24 @@ room-item {
 }
 
 .wordcloud{
-    display: block;
-    width: 500px;
+    box-sizing: border-box;
+    display: inline-block;
     float: left;
+    width: 30%;
     margin-top: 10px;
-    margin-left: 75px;
+    min-height: 400px;
+    background: #FAFAFA;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+}
+
+.my-dictionary{
+    box-sizing: border-box;
+    display: inline-block;
+    padding: 15px;
+    width: 30%;
+    float: left;
+    margin: 0 1.5%;
+    margin-top: 10px;
     min-height: 400px;
     background: #FAFAFA;
     box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);

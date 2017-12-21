@@ -33,6 +33,21 @@ var insertDocument = function(db, callback) {
   )
 
   db.collection("messages").update(
+    {"message" : "I am in panic panic panic panic panic mode!!"},
+    {
+     "room_slug" : "aab",
+     "message" : "I am in panic panic panic panic panic mode!!",
+     "owner_info" : {
+         "first_name" : "Tien",
+         "last_name" : "P"
+     },
+     "created_at" : 121333
+   },
+   { upsert: true }
+  )
+
+
+  db.collection("messages").update(
     {"message" : "and when you are having some kind of dialect all you are not speaking as a native of then it will be really strange if I'm"},
     {
      "room_slug" : "aab",
