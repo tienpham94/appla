@@ -190,7 +190,7 @@ room-item {
 
 @media (max-width: 992px)  {
     .nav {
-      width: 500px;
+      width: 100%;
       display: flex;
       justify-content: center;
       margin: 0 auto;
@@ -204,7 +204,7 @@ room-item {
 
 @media (max-width: 1160px)  {
     .message-container-room {
-      min-width: 400px;
+      min-width: 350px;
       display: block;
       margin: 0 auto;
       float: none;
@@ -212,14 +212,14 @@ room-item {
 
     .wordcloud{
       display: block;
-      min-width: 400px;
+      min-width: 350px;
       margin: 0 auto;
       float: none;
     }
 
     .my-dictionary{
       display: block;
-      min-width: 400px;
+      min-width: 350px;
       margin: 0 auto;
       float: none;
     }
