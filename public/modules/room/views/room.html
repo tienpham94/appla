@@ -23,9 +23,12 @@
 </nav>
 
 <div class="nav" ng-controller="navController">
-  <button type="button" ng-click="clickConversation()">Conversation</button>
+  <a class="blue lighten-1 waves-effect waves-light btn" id="conversation-button" ng-click="clickConversation()">Conversation</a>
+  <a class="blue lighten-4 waves-effect waves-light btn" id="wordcloud-button" ng-click="clickWordCloud()">Wordcloud</a>
+  <a class="blue lighten-4 waves-effect waves-light btn" id="dictionary-button" ng-click="clickDictionary()">Dictionary</a>
+  <!-- <button type="button" ng-click="clickConversation()">Conversation</button>
   <button type="button" ng-click="clickWordCloud()">WordCloud</button>
-  <button type="button" ng-click="clickDictionary()">Dictionary</button>
+  <button type="button" ng-click="clickDictionary()">Dictionary</button> -->
 
 </div>
 
@@ -58,7 +61,7 @@
 <div class="my-dictionary hide-on-med-and-down" id="my-dictionary">
     <div class="row message-row">
         <div class="col s12 message-col">
-            <h5>My Dictionary</h5>
+            <h5 class="center-align deep-orange-text">My Dictionary</h5>
             <ul id="dictionary"></ul>
         </div>
     </div>

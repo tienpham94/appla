@@ -12,6 +12,14 @@ angular.module('room.module')
         // // hide the lorem ipsum text
         // document.getElementById("cloud").style.display = 'none';
         // document.getElementById("my-dictionary").style.display = 'none';
+
+        // Restyle button
+        document.getElementById("conversation-button").classList.remove("lighten-4");
+        document.getElementById("conversation-button").classList.add("lighten-1");
+        document.getElementById("wordcloud-button").classList.remove("lighten-1");
+        document.getElementById("wordcloud-button").classList.add("lighten-4");
+        document.getElementById("dictionary-button").classList.remove("lighten-1");
+        document.getElementById("dictionary-button").classList.add("lighten-4");
       }
 
       $scope.clickWordCloud = function() {
@@ -22,6 +30,13 @@ angular.module('room.module')
         // // hide the lorem ipsum text
         // document.getElementById("conversation").style.display = 'none';
         // document.getElementById("my-dictionary").style.display = 'none';
+        // Restyle button
+        document.getElementById("conversation-button").classList.remove("lighten-1");
+        document.getElementById("conversation-button").classList.add("lighten-4");
+        document.getElementById("wordcloud-button").classList.remove("lighten-4");
+        document.getElementById("wordcloud-button").classList.add("lighten-1");
+        document.getElementById("dictionary-button").classList.remove("lighten-1");
+        document.getElementById("dictionary-button").classList.add("lighten-4");
       }
 
       $scope.clickDictionary = function() {
@@ -32,6 +47,13 @@ angular.module('room.module')
         // // hide the lorem ipsum text
         // document.getElementById("cloud").style.display = 'none';
         // document.getElementById("conversation").style.display = 'none';
+        // Restyle button
+        document.getElementById("conversation-button").classList.remove("lighten-1");
+        document.getElementById("conversation-button").classList.add("lighten-4");
+        document.getElementById("wordcloud-button").classList.remove("lighten-1");
+        document.getElementById("wordcloud-button").classList.add("lighten-4");
+        document.getElementById("dictionary-button").classList.remove("lighten-4");
+        document.getElementById("dictionary-button").classList.add("lighten-1");
       }
     })
     .component('wordCloud', {
@@ -46,7 +68,7 @@ angular.module('room.module')
             //     $scope.title = 'Clicked ' + $scope.clicks + ' times'
             // }
           $scope.drawWordCloud = drawWordCloud;
-
+          drawWordCloud();
         }
     })
     .directive('userList', ['roomSocket','RoomService', function (roomSocket, RoomService) {
