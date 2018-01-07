@@ -229,3 +229,20 @@ room-item {
 .btn {
   font-size: 12px;
 }
+
+ul {
+  padding-left: 0;
+}
+
+#dictionary > li {
+  text-transform: capitalize;
+  list-style-type: none !important;
+  color: olive;
+}
+#dictionary > li:before {
+  content: "–";
+  padding-right: 0.5em;
+  color: chocolate;
+  font-weight: bold;
+  font-size: 1.5em;
+}
