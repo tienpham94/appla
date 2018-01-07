@@ -224,3 +224,8 @@ room-item {
       float: none;
     }
 }
+
+
+.btn {
+  font-size: 12px;
+}
