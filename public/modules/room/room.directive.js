@@ -189,7 +189,7 @@ function drawWordCloud(){
   document.getElementById("wordcloud").innerHTML = "";
   var words = returnWords();
   d3.wordcloud()
-    .size([320, 320])
+    .size([350, 350])
     .selector('#wordcloud')
     .scale("log")
     .fontWeight("bold")
