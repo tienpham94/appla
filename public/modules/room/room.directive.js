@@ -1,4 +1,39 @@
 angular.module('room.module')
+    .controller('navController', function($scope) {
+    // $scope.showMe = false;
+      $scope.clickConversation = function() {
+        // if(!elem.hasClass('desired_class')){
+        //   elem.addClass('desired_class');
+        //  }
+        document.getElementById("conversation").classList.remove("hide-on-med-and-down");
+        document.getElementById("cloud").classList.add("hide-on-med-and-down");
+        document.getElementById("my-dictionary").classList.add("hide-on-med-and-down");
+        // document.getElementById("conversation").style.display = 'block';
+        // // hide the lorem ipsum text
+        // document.getElementById("cloud").style.display = 'none';
+        // document.getElementById("my-dictionary").style.display = 'none';
+      }
+
+      $scope.clickWordCloud = function() {
+        document.getElementById("cloud").classList.remove("hide-on-med-and-down");
+        document.getElementById("conversation").classList.add("hide-on-med-and-down");
+        document.getElementById("my-dictionary").classList.add("hide-on-med-and-down");
+        // document.getElementById("cloud").style.display = 'block';
+        // // hide the lorem ipsum text
+        // document.getElementById("conversation").style.display = 'none';
+        // document.getElementById("my-dictionary").style.display = 'none';
+      }
+
+      $scope.clickDictionary = function() {
+        document.getElementById("conversation").classList.add("hide-on-med-and-down");
+        document.getElementById("cloud").classList.add("hide-on-med-and-down");
+        document.getElementById("my-dictionary").classList.remove("hide-on-med-and-down");
+        // document.getElementById("my-dictionary").style.display = 'block';
+        // // hide the lorem ipsum text
+        // document.getElementById("cloud").style.display = 'none';
+        // document.getElementById("conversation").style.display = 'none';
+      }
+    })
     .component('wordCloud', {
         // template: "<div class=''><h1 class='new-class'>{{ title }}</h1><button ng-click='someClickTest()'>Click me!</button></div>",
         templateUrl: '/modules/room/views/wordcloud.html',

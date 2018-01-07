@@ -182,3 +182,45 @@ room-item {
     margin-top: calc(25% - 10px);
     margin-bottom: calc(25% - 10px);
 }
+
+
+ .nav {
+  display: none;
+}
+
+@media (max-width: 992px)  {
+    .nav {
+      width: 500px;
+      display: flex;
+      justify-content: center;
+      margin: 0 auto;
+    }
+}
+
+/* .active {
+  width: 100%;
+} */
+
+
+@media (max-width: 1160px)  {
+    .message-container-room {
+      min-width: 400px;
+      display: block;
+      margin: 0 auto;
+      float: none;
+    }
+
+    .wordcloud{
+      display: block;
+      min-width: 400px;
+      margin: 0 auto;
+      float: none;
+    }
+
+    .my-dictionary{
+      display: block;
+      min-width: 400px;
+      margin: 0 auto;
+      float: none;
+    }
+}

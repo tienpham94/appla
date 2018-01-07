@@ -22,13 +22,14 @@
     </div>
 </nav>
 
-<div class="nav">
-  <a class="waves-effect waves-light btn">Conversation</a>
-  <a class="waves-effect waves-light btn">WordCloud</a>
-  <a class="waves-effect waves-light btn">Dictionary</a>
+<div class="nav" ng-controller="navController">
+  <button type="button" ng-click="clickConversation()">Conversation</button>
+  <button type="button" ng-click="clickWordCloud()">WordCloud</button>
+  <button type="button" ng-click="clickDictionary()">Dictionary</button>
+
 </div>
 
-<div class="message-container-room">
+<div class="message-container-room" id="conversation">
     <div class="row">
         <div class="col s12">
             <h4 class="room-title center-align deep-orange-text text-darken-1">{{room.room_name}}</h4>
@@ -45,7 +46,7 @@
 </div>
 
 
-<div class="wordcloud">
+<div class="wordcloud hide-on-med-and-down" id="cloud">
     <div class="row message-row">
         <div class="col s12 message-col">
             <word-cloud></word-cloud>
@@ -54,7 +55,7 @@
 
 </div>
 
-<div class="my-dictionary">
+<div class="my-dictionary hide-on-med-and-down" id="my-dictionary">
     <div class="row message-row">
         <div class="col s12 message-col">
             <h5>My Dictionary</h5>
