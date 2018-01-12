@@ -1,3 +1,5 @@
+var all_messages = "";
+
 angular.module('room.module')
     .controller('navController', function($scope) {
     // $scope.showMe = false;
@@ -111,7 +113,7 @@ angular.module('room.module')
                     }
                     scope.message = "";
                 });
-                console.log(scope.messages);
+                all_messages = scope.messages;
 
                 function sendMessage() {
                     RoomService.sendMessage(scope.message, $rootScope.user);
@@ -149,10 +151,10 @@ function returnWords(){
   var data_arr = [];
 
   //TEST
-  var priceEls = document.getElementsByClassName("msg-content");
-  for (let i = 0; i < priceEls.length; i++) {
-    let price = priceEls[i].innerText;
-    data_arr.push(price);
+  // var priceEls = document.getElementsByClassName("msg-content");
+  for (let i = 0; i < all_messages.length; i++) {
+    let mess = all_messages[i].message;
+    data_arr.push(mess);
   }
 
   var data = data_arr.join("");
