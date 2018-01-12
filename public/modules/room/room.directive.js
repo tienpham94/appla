@@ -207,3 +207,8 @@ function drawWordCloud(){
     })
     .start();
   }
+
+
+document.addEventListener("DOMContentLoaded", function(event) {
+    drawWordCloud()
+});
