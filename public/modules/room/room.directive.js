@@ -111,6 +111,7 @@ angular.module('room.module')
                     }
                     scope.message = "";
                 });
+                console.log(scope.messages);
 
                 function sendMessage() {
                     RoomService.sendMessage(scope.message, $rootScope.user);
@@ -153,7 +154,6 @@ function returnWords(){
     let price = priceEls[i].innerText;
     data_arr.push(price);
   }
-  console.log(priceEls);
 
   var data = data_arr.join("");
 
@@ -182,7 +182,6 @@ function returnWords(){
     document.getElementById("result").innerHTML = `The 10 most frequent words are: ${most_freq_words_arr.join(", ")}`
   }
 
-  console.log(final_arr);
   return final_arr;
 };
 
