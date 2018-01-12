@@ -158,9 +158,8 @@ function returnWords(){
   }
 
   var data = data_arr.join("");
+  console.log(data);
 
-
-  //END TEST
 
   // var data= document.getElementById('txt').value;
   var arr = [];
