@@ -158,8 +158,6 @@ function returnWords(){
   }
 
   var data = data_arr.join("");
-  console.log(data);
-
 
   // var data= document.getElementById('txt').value;
   var arr = [];
@@ -173,6 +171,8 @@ function returnWords(){
   var final_arr= arr.filter((el) => {
       return stopWords.indexOf(el.text) === -1;
     }).sort(compare);
+
+  console.log(final_arr);
 
   //Find the most frequent 10 words
   let most_freq_words_arr = [];
