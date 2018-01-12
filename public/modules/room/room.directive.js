@@ -68,6 +68,7 @@ angular.module('room.module')
             //     $scope.title = 'Clicked ' + $scope.clicks + ' times'
             // }
           $scope.drawWordCloud = drawWordCloud;
+          drawWordCloud();
         }
     })
     .directive('userList', ['roomSocket','RoomService', function (roomSocket, RoomService) {
@@ -154,6 +155,7 @@ function returnWords(){
     let price = priceEls[i].innerText;
     data_arr.push(price);
   }
+  console.log(priceEls);
 
   var data = data_arr.join("");
 
@@ -205,5 +207,3 @@ function drawWordCloud(){
     })
     .start();
   }
-
-drawWordCloud();
