@@ -70,6 +70,7 @@ angular.module('room.module')
             //     $scope.title = 'Clicked ' + $scope.clicks + ' times'
             // }
           $scope.drawWordCloud = drawWordCloud;
+          drawWordCloud();
         }
     })
     .directive('userList', ['roomSocket','RoomService', function (roomSocket, RoomService) {
@@ -100,6 +101,7 @@ angular.module('room.module')
                 roomSocket.forward('messages/received', scope);
 
                 scope.$on('messages/received', function(ev, message){
+                    drawWordCloud();
                     var index = null;
                     for (var i = 0; i < scope.messages.length; i++) {
                         if (scope.messages[i].messageId == message.messageId) {
