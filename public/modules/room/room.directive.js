@@ -172,16 +172,14 @@ function returnWords(){
       return stopWords.indexOf(el.text) === -1;
     }).sort(compare);
 
-  console.log(final_arr);
-
-  //Find the most frequent 10 words
-  let most_freq_words_arr = [];
-  for(let i=0; i< 10;i++){
-    most_freq_words_arr.push(final_arr[i].text);
-  }
-  if(final_arr.length > 0){
-    document.getElementById("result").innerHTML = `The 10 most frequent words are: ${most_freq_words_arr.join(", ")}`
-  }
+  // //Find the most frequent 10 words
+  // let most_freq_words_arr = [];
+  // for(let i=0; i< 10;i++){
+  //   most_freq_words_arr.push(final_arr[i].text);
+  // }
+  // if(final_arr.length > 0){
+  //   document.getElementById("result").innerHTML = `The 10 most frequent words are: ${most_freq_words_arr.join(", ")}`
+  // }
 
   return final_arr;
 };
