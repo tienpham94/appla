@@ -116,6 +116,7 @@ angular.module('room.module')
                     scope.message = "";
                 });
                 all_messages = scope.messages;
+                console.log(all_messages);
 
                 function sendMessage() {
                     RoomService.sendMessage(scope.message, $rootScope.user);
@@ -159,7 +160,7 @@ function returnWords(){
     data_arr.push(mess);
   }
 
-  var data = data_arr.join("");
+  var data = data_arr.join(" ");
 
   // var data= document.getElementById('txt').value;
   var arr = [];
