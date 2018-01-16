@@ -116,7 +116,6 @@ angular.module('room.module')
                     scope.message = "";
                 });
                 all_messages = scope.messages;
-                console.log(all_messages);
 
                 function sendMessage() {
                     RoomService.sendMessage(scope.message, $rootScope.user);
