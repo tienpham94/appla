@@ -125,7 +125,7 @@ angular.module('room.module')
         }
     }]);
 
-var stopWords = ["a", "an", "and", "tien", "i", "the", "this", "there"];
+var stopWords = ["a", "an", "and", "tien", "i", "the", "this", "there", "is", "are", "to", "of"];
 
 function wordFreq(string) {
     var words = string.replace(/[.,]/g, '').split(/\s/);
