@@ -1,4 +1,5 @@
-var all_messages = "";
+let all_messages = "";
+let words_chosen = [];
 
 angular.module('room.module')
     .controller('navController', function($scope) {
@@ -199,8 +200,12 @@ function drawWordCloud(){
     .spiral("archimedean")
     .onwordclick(function(d, i) {
       var div = document.getElementById('result');
-      var clicked_word = `<li style="list-style:disc">${d.text}</li>`;
-      document.getElementById('dictionary').innerHTML += clicked_word
+      var clicked_word = `<li style="list-style:disc" id=${d.text}>${d.text}</li>`;
+
+      if(!words_chosen.includes(`${d.text}`)){
+        document.getElementById('dictionary').innerHTML += clicked_word
+        words_chosen.push(`${d.text}`)
+      }
 
     })
     .start();
